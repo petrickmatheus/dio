@@ -1,7 +1,7 @@
 {
   "name": "aws-serverless",
   "version": "1.0.0",
-  "description": "Projeto com AWS Lambda, API Gateway e DynamoDB",
+  "description": "Projeto com Lambda, API Gateway e DynamoDB",
   "main": "src/handler.js",
   "scripts": {
     "deploy": "serverless deploy",

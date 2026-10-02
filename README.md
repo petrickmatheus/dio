@@ -1,15 +1,14 @@
 # Desafio AWS Serverless - versão iniciante
 
-Projeto criado como parte de um desafio de introdução à AWS Serverless e Infraestrutura como Código (IaC).
+Projeto criado como parte de um desafio de introdução a AWS Serverless e Infraestrutura como Código (IaC)
 
-A ideia foi criar uma API pequena para cadastrar e consultar itens, utilizando serviços gerenciados da AWS e o Serverless Framework.
+A ideia foi criar uma API pequena para cadastrar e consultar itens, utilizando serviços gerenciados da AWS e o Serverless Framework
 
 ## Arquitetura
 
 Cliente -> API Gateway -> Lambda -> DynamoDB
 
-O arquivo `serverless.yml` descreve tanto as funções quanto a tabela DynamoDB. Assim, a infraestrutura pode ser criada pelo próprio projeto.
-
+O arquivo `serverless.yml` descreve tanto as funções quanto a tabela DynamoDB. Assim, a infraestrutura pode ser criada pelo próprio projeto
 ## Tecnologias
 
 - Node.js
@@ -58,7 +57,7 @@ deploy:
 npx serverless deploy
 ```
 
-Ao final do deploy o Serverless mostra as URLs criadas pelo API Gateway.
+Ao final do deploy o Serverless mostra as URLs criadas pelo API Gateway
 
 Pra remover os recursos depois dos testes:
 
@@ -80,10 +79,10 @@ aws-serverless-iniciante/
 
 ## O que eu aprendi
 
-Nesse projeto pratiquei conceitos básicos de arquitetura Serverless, criação de funções Lambda, API Gateway, DynamoDB e Infraestrutura como Código usando o Serverless Framework.
+Nesse projeto eu pratiquei conceitos básicos de arquitetura Serverless, criação de funções Lambda, API Gateway, DynamoDB e Infraestrutura como Código usando o Serverless Framework
 
 Também entendi melhor como uma função Lambda recebe uma requisição HTTP, acessa um banco NoSQL e devolve uma resposta para a API.
 
 ## Referência
 
-Projeto inspirado no desafio `dio-live-serverless-2907`, utilizado como referência de estudo.
+`dio-live-serverless-2907`
