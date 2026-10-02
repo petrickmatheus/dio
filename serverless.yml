@@ -1,0 +1,55 @@
+service: aws-serverless
+
+provider:
+  name: aws
+  runtime: nodejs22.x
+  region: us-east-1
+  stage: dev
+  environment:
+    TABLE_NAME: ${self:service}-items-${sls:stage}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:PutItem
+            - dynamodb:Scan
+            - dynamodb:GetItem
+          Resource:
+            - Fn::GetAtt: [ItemsTable, Arn]
+
+functions:
+  criarItem:
+    handler: src/handler.criarItem
+    events:
+      - httpApi:
+          path: /items
+          method: post
+
+  listarItens:
+    handler: src/handler.listarItens
+    events:
+      - httpApi:
+          path: /items
+          method: get
+
+  buscarItem:
+    handler: src/handler.buscarItem
+    events:
+      - httpApi:
+          path: /items/{id}
+          method: get
+
+resources:
+  Resources:
+    ItemsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:service}-items-${sls:stage}
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
