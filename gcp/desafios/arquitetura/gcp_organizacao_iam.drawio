@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="gcp-org-iam" name="Arquitetura GCP - Organização e IAM">
+    <mxGraphModel dx="1144" dy="601" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#202124;" value="Organização GCP — Estrutura de Recursos e Grupos de Acesso" vertex="1">
+          <mxGeometry height="50" width="1000" x="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="org" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#4285F4;strokeWidth=2;fontSize=16;" value="&lt;b&gt;GCP Organization&lt;/b&gt;&lt;br&gt;empresa.com.br" vertex="1">
+          <mxGeometry height="80" width="300" x="650" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="folder-dev" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F4EA;strokeColor=#34A853;strokeWidth=2;fontSize=14;" value="&lt;b&gt;Folder — Desenvolvimento&lt;/b&gt;&lt;br&gt;Ambientes DEV" vertex="1">
+          <mxGeometry height="70" width="280" x="220" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="folder-hml" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF7E0;strokeColor=#FBBC04;strokeWidth=2;fontSize=14;" value="&lt;b&gt;Folder — Homologação&lt;/b&gt;&lt;br&gt;Ambientes HML" vertex="1">
+          <mxGeometry height="70" width="280" x="660" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="folder-prod" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE8E6;strokeColor=#EA4335;strokeWidth=2;fontSize=14;" value="&lt;b&gt;Folder — Produção&lt;/b&gt;&lt;br&gt;Ambientes PROD" vertex="1">
+          <mxGeometry height="70" width="280" x="1100" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="p-dev-data" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#34A853;fontSize=13;" value="&lt;b&gt;Project&lt;/b&gt;&lt;br&gt;data-platform-dev" vertex="1">
+          <mxGeometry height="65" width="180" x="170" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="p-dev-app" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#34A853;fontSize=13;" value="&lt;b&gt;Project&lt;/b&gt;&lt;br&gt;apps-dev" vertex="1">
+          <mxGeometry height="65" width="180" x="370" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="p-hml-data" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FBBC04;fontSize=13;" value="&lt;b&gt;Project&lt;/b&gt;&lt;br&gt;data-platform-hml" vertex="1">
+          <mxGeometry height="65" width="180" x="610" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="p-hml-app" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FBBC04;fontSize=13;" value="&lt;b&gt;Project&lt;/b&gt;&lt;br&gt;apps-hml" vertex="1">
+          <mxGeometry height="65" width="180" x="810" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="p-prod-data" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EA4335;fontSize=13;" value="&lt;b&gt;Project&lt;/b&gt;&lt;br&gt;data-platform-prod" vertex="1">
+          <mxGeometry height="65" width="180" x="1050" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="p-prod-app" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EA4335;fontSize=13;" value="&lt;b&gt;Project&lt;/b&gt;&lt;br&gt;apps-prod" vertex="1">
+          <mxGeometry height="65" width="180" x="1250" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="iam-zone" parent="1" style="swimlane;html=1;rounded=1;startSize=40;fillColor=#F8F9FA;strokeColor=#5F6368;strokeWidth=2;fontSize=16;" value="&lt;b&gt;Cloud Identity / IAM — Grupos de Acesso&lt;/b&gt;" vertex="1">
+          <mxGeometry height="260" width="1260" x="170" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="grp-admin" parent="iam-zone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE8E6;strokeColor=#EA4335;fontSize=12;" value="&lt;b&gt;gcp-admins@empresa.com.br&lt;/b&gt;&lt;br&gt;&lt;br&gt;Função: Administração da plataforma&lt;br&gt;&lt;b&gt;Roles:&lt;/b&gt;&lt;br&gt;Organization Admin&lt;br&gt;Security Admin" vertex="1">
+          <mxGeometry height="155" width="260" x="50" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="grp-data" parent="iam-zone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#4285F4;fontSize=12;" value="&lt;b&gt;data-engineers@empresa.com.br&lt;/b&gt;&lt;br&gt;&lt;br&gt;Função: Engenharia de Dados&lt;br&gt;&lt;b&gt;Roles:&lt;/b&gt;&lt;br&gt;BigQuery User&lt;br&gt;Storage Object Admin" vertex="1">
+          <mxGeometry height="155" width="260" x="350" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="grp-dev" parent="iam-zone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F4EA;strokeColor=#34A853;fontSize=12;" value="&lt;b&gt;developers@empresa.com.br&lt;/b&gt;&lt;br&gt;&lt;br&gt;Função: Desenvolvimento&lt;br&gt;&lt;b&gt;Roles:&lt;/b&gt;&lt;br&gt;Viewer / Developer&lt;br&gt;Acesso DEV e HML" vertex="1">
+          <mxGeometry height="155" width="260" x="650" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="grp-view" parent="iam-zone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF7E0;strokeColor=#FBBC04;fontSize=12;" value="&lt;b&gt;auditors@empresa.com.br&lt;/b&gt;&lt;br&gt;&lt;br&gt;Função: Auditoria / Consulta&lt;br&gt;&lt;b&gt;Roles:&lt;/b&gt;&lt;br&gt;Viewer&lt;br&gt;Security Reviewer" vertex="1">
+          <mxGeometry height="155" width="260" x="950" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#FFF8E1;strokeColor=#F9AB00;fontSize=13;" value="&lt;b&gt;Princípio aplicado:&lt;/b&gt; conceder acesso por grupos e função, utilizando o menor privilégio necessário." vertex="1">
+          <mxGeometry height="70" width="650" x="475" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="e-org-dev" edge="1" parent="1" source="org" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5F6368;" target="folder-dev">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-org-hml" edge="1" parent="1" source="org" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5F6368;" target="folder-hml">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-org-prod" edge="1" parent="1" source="org" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5F6368;" target="folder-prod">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-dev-data" edge="1" parent="1" source="folder-dev" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#34A853;" target="p-dev-data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-dev-app" edge="1" parent="1" source="folder-dev" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#34A853;" target="p-dev-app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-hml-data" edge="1" parent="1" source="folder-hml" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#FBBC04;" target="p-hml-data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-hml-app" edge="1" parent="1" source="folder-hml" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#FBBC04;" target="p-hml-app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-prod-data" edge="1" parent="1" source="folder-prod" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#EA4335;" target="p-prod-data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-prod-app" edge="1" parent="1" source="folder-prod" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#EA4335;" target="p-prod-app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
