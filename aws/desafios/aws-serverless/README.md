@@ -1,4 +1,4 @@
-# Desafio AWS Serverless - versão iniciante
+# Desafio AWS Serverless
 
 Projeto criado como parte de um desafio de introdução a AWS Serverless e Infraestrutura como Código (IaC)
 
